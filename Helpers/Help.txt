@@ -1,0 +1,20 @@
+- Codegenerator
+Tạo ra Area tên là Area_Name:                                   dotnet aspnet-codegenerator area Area_Name
+Tạo ra Controller:                                              dotnet aspnet-codegenerator controller -name Controller_Name -outDir Path -namespace namespace_Name
+- Migrations
+Liệt kê các Migration:                                          dotnet ef migrations list
+Tạo ra một Migration tên là Migartion_Name:                     dotnet ef migrations add Migartion_Name 
+Cập nhật Migration cuối cùng:                                   dotnet ef database update
+Cập nhật Migration có tên Migartion_Name lên database:          dotnet ef database update Migartion_Name
+Xóa Migration cuối với lệnh:                                    dotnet ef migrations remove
+Xóa Database:                                                   dotnet ef database drop -f
+-Package 
+dotnet add package Microsoft.AspNetCore.Identity
+dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.AspNetCore.Identity.UI
+dotnet add package Microsoft.AspNetCore.Authentication
+dotnet add package Microsoft.AspNetCore.Http.Abstractions
+dotnet add package Microsoft.AspNetCore.Authentication.Cookies
+dotnet add package Microsoft.AspNetCore.Authentication.Facebook
+dotnet add package Microsoft.AspNetCore.Authentication.Google

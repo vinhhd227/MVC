@@ -1,0 +1,282 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/lib/fontawesome/css/all.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/reponsive.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC.styles.css" asp-append-version="true" />
+    <!--Font-->
+    <link rel="stylesheet" href="https://use.typekit.net/pfh4qwx.css">
+    <!--Slick-->
+    <link rel="stylesheet" type="text/css" href="~/lib/slick/slick.css" asp-append-version="true" />
+    <link rel="stylesheet" type="text/css" href="~/lib/slick/slick-theme.css" asp-append-version="true" />
+</head>
+
+<body class="position-relative px-1 px-sm-2 px-md-3 px-lg-4 px-xl-5 px-xxl-0">
+    <!--Header-->
+    <header>
+        <div class="container-xxl m-auto row" id="header_ctn">
+            <div class="col-md-4 text-center d-block d-md-none">
+                <a asp-controller="Home" asp-action="Index"><img src="~/content/images/layout/logo-burgelo.svg"
+                        alt="Logo"></a>
+            </div>
+            <div
+                class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-start phone_number">
+                <a class="text-decoration-none" href="tel:+1 (800) 312-2121">
+                    <span class="icon--yellow"><i class="fa-duotone fa-phone"></i></span>
+                    <span class="ps-3">+1 (800) 312-2121</span>
+                </a>
+            </div>
+            <div class="col-md-4 text-center d-none d-md-block">
+                <a asp-controller="Home" asp-action="Index"><img src="~/content/images/layout/logo-burgelo.svg"
+                        alt="Logo"></a>
+            </div>
+            <div class="col-md-4 d-flex align-items-center justify-content-center justify-content-md-end address">
+                <span class="icon--yellow"><i class="fa-duotone fa-location-dot"></i></span>
+                <span class="ps-3">172 14th Street, Office 503, NY</span>
+            </div>
+        </div>
+        <!--Navigation-->
+        <div class="container-xxl m-auto row sticky-lg-top p-0" id="nav_ctn">
+            <div class="col-lg-3"></div>
+            <nav class="navbar navbar-expand col-lg-6" id="navbar">
+                <ul class="navbar-nav d-flex justify-content-md-center justify-content-end gap-2 gap-sm-4 w-100">
+                    <li class="nav-item drop_down">
+                        <a class="nav-link" asp-controller="home" asp-action="index">
+                            <span>Home&nbsp;<i class="fa-regular fa-chevron-down"></i></span>
+                        </a>
+                        <!--Home dropdown-->
+                        <div class="dropdown_content position-absolute p-4" id="home_dropdown">
+                            <!--Menu-->
+                            <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3">
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="1" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/burger.png" alt="Burgers"></a>
+                                </div>
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="2" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/pizza.png" alt="Pizza"></a>
+                                </div>
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="3" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/drinks.png" alt="Drinks"></a>
+                                </div>
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="4" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/pasta.png" alt="Pasta"></a>
+                                </div>
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="5" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/soup.png" alt="Soup"></a>
+                                </div>
+                                <div class="col">
+                                    <a asp-controller="menu" asp-action="category" asp-route-id="6" class="menu__a"><img
+                                            class="menu__a__img m-auto m-md-0"
+                                            src="~/content/images/layout/navigation/menu/sushi.png" alt="Sushi"></a>
+                                </div>
+                            </div>
+                            <!--Special_offer-->
+                            <div class="row m-auto gap-4 g-4 mt-4 mt-lg-0">
+                                <!--Yellow-->
+                                <div class="col-lg p-0">
+                                    <div
+                                        class="d-flex flex-column justify-content-between flex-sm-row align-items-sm-center flex-lg-column align-items-lg-start flex-xl-row align-items-xl-center special_offer special_offer--bgyellow position-relative">
+                                        <div class="d-flex flex-column justify-content-between special_offer__title">
+                                            <span class="title--small">SPECIAL OFFER</span>
+                                            <span class="title--big">BUY 2 GET 3</span>
+                                        </div>
+                                        <div class="btn_ctn">
+                                            <a class="rounded-pill btn__a btn--dark btn--hoverlight"
+                                                style="cursor: pointer;" asp-controller="menu" asp-action="category">
+                                                <span>ORDER NOW</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Dark-->
+                                <div class="col-lg p-0">
+                                    <div
+                                        class="d-flex flex-column justify-content-between flex-sm-row align-items-sm-center flex-lg-column align-items-lg-start flex-xl-row align-items-xl-center special_offer special_offer--bgdark">
+                                        <div class="d-flex flex-column justify-content-between special_offer__title">
+                                            <span class="title--big">Get 25% OFF</span>
+                                            <span class="title--small">ON YOUR ODER</span>
+                                        </div>
+                                        <div class="btn_ctn">
+                                            <a class="rounded-pill btn__a btn--yellow btn--hoverlight"
+                                                asp-controller="menu" asp-action="category">
+                                                <span>ORDER NOW</span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="home"
+                            asp-fragment="about_ctn"><span>About</span></a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="home"
+                            asp-fragment="food_ctn"><span>Food</span></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="home"
+                            asp-fragment="delivery_ctn"><span>Delivery</span></a></li>
+                    <li class="nav-item"><a class="nav-link" asp-controller="home"
+                            asp-fragment="contact_ctn"><span>Contact</span></a></li>
+                </ul>
+            </nav>
+            <div class="d-flex align-items-center justify-content-lg-end justify-content-between col-lg-3">
+                <div class="link_social ms-lg-2">
+                    <a class="px-2" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                    <a class="px-2" href=""><i class="fa-brands fa-pinterest"></i></a>
+                    <a class="px-2" href=""><i class="fa-brands fa-instagram"></i></a>
+                </div>
+                <div class="d-flex ps-lg-4 ps-md-3 search_cart">
+                    <a asp-area="Login" asp-controller="Login" asp-action="Index"><i class="fa-light fa-user"></i></a>
+                    <div class="search px-2 border-end">
+                        <button class="btn btn-link p-0 shadow-none">
+                            <i class="fa-light fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                    <li class="d-block drop_down">
+                        <div class="cart px-2">
+                            <a class="text-decoration-none" href="">
+                                <i class="fa-light fa-bag-shopping"></i>
+                                &ensp;
+                                <span class="cart_count d-inline-block text-center">1</span>
+                            </a>
+                        </div>
+                        <div class="dropdown_content position-absolute p-4" id="cart_dropdown">
+                            <div class="d-flex">
+                                <img src="~/content/images/food/burger/Bbq-burger.png" alt="">
+                                <div>
+                                    <a class="food_link" href="bbq_burger.html">BBQ Burger</a>
+                                    <div class="d-flex price_block">
+                                        <div class="number">1</div>
+                                        &nbsp;&#215;&nbsp;
+                                        <div class="price">5.0</div>
+                                        <div class="currency">$</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="d-flex final_price_block text-center d-flex justify-content-around border-top border-bottom border-1 py-3">
+                                Subtotal:
+                                <div class="price_block d-flex">
+                                    <div class="currency">$</div>
+                                    <div class="price">5.0</div>
+                                </div>
+                            </div>
+                            <div class="d-flex flex-column pt-3 btn_ctn">
+                                <a class="rounded-pill btn_yellow mb-2" href="check_out.html"> <i
+                                        class="fa-solid fa-cart-shopping"></i>&nbsp;Check out</a>
+                                <a class="rounded-pill btn_dark mt-2" href="cart.html"><i
+                                        class="fa-regular fa-eye"></i>&nbsp;View cart</a>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="container-fluid">
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <!--Contact-->
+    <div class="container-xxl m-auto mt-5 py-5 row" id="contact_ctn">
+        <div class="col-xl-8 d-md-flex row py-2">
+            <!---->
+            <div class="col-md my-md-0 my-2">
+                <h3>SIGN UP FOR OUR UPDATE</h3>
+                <div class="mt-2 d-flex flex-column justify-content-between">
+                    <p>To stay up-to-date on our promotions,
+                        discounts, sales, special offers and more.</p>
+                    <div class="position-relative" id="sub">
+                        <input class="rounded-pill border-1 border px-4 py-3" type="email" name="" id=""
+                            placeholder="Enter your email">
+                        <button class="position-absolute top-50 translate-middle-y border-0"><i
+                                class="fa-regular fa-paper-plane"></i></button>
+                    </div>
+                    <div class="link_social ms-lg-2 mt-5">
+                        <a class="px-2" href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a class="px-2" href=""><i class="fa-brands fa-pinterest"></i></a>
+                        <a class="px-2" href=""><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-md my-md-0 my-2" id="contact_us_ctn">
+                <h3>CONTACT US</h3>
+                <div class="d-flex flex-column justify-content-between align-items-start px-4">
+                    <div class="address mt-2 d-flex align-items-center">
+                        <span class="icon--yellow"><i class="fa-light fa-location-dot"></i></span>
+                        <span class="ps-4">172 14th Street, Office 503, NY</span>
+                    </div>
+                    <div class="phone_number mt-2">
+                        <a class="text-decoration-none d-flex align-items-center" href="tel:+1 (800) 312-2121">
+                            <span class="icon--yellow"><i class="fa-light fa-phone"></i></span>
+                            <span class="ps-3">+1 (800) 312-2121</span>
+                        </a>
+                    </div>
+                    <div class="opening_time mt-2 d-flex align-items-center">
+                        <span class="icon--yellow"><i class="fa-light fa-clock"></i></span>
+                        <span class="d-inline-block ps-3"> Monday-Friday: 9:00 am - 6:00 pm <br>
+                            Saturday: 9:00 am - 4:00 pm</span>
+                    </div>
+                    <div class="send_email mt-2">
+                        <a class="text-decoration-none d-flex align-items-center" href="mailto:someone@example.com">
+                            <span class="icon--yellow"><i class="fa-light fa-envelope"></i></span>
+                            <span class="ps-3">Send us an email</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="col-xl-4 my-md-0 my-2 py-2">
+            <h3>INSTAGRAM</h3>
+            <div class="row row-cols-4 g-4">
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/banana-juice_01-400x400.png" alt="">
+                </div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/Depositphotos_41260055_el0-1.png"
+                        alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/pasta2_01.png" alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/pizza3_02.png" alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/sushi1_01.png" alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/Turkey-Burgers_01.png" alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/sushi1_01.png" alt=""></div>
+                <div class="col img_ctn"><img src="~/content/images/layout/contact/Turkey-Burgers_01.png" alt=""></div>
+            </div>
+        </div>
+    </div>
+    <!--Map-->
+    <div class="container-xxl" id="map_ctn">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d324.4939909713389!2d105.82234377118773!3d21.00747778670342!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ac81809d7cd7%3A0x23e0751c3c0f7805!2zVHLGsOG7nW5nIFRydW5nIGPhuqVwIE5naGnhu4dwIHbhu6UgdsOgIGThuqF5IG5naOG7gSBDw7RuZyDEkW_DoG4gVHAgSMOgIE7hu5lp!5e0!3m2!1svi!2s!4v1660192728564!5m2!1svi!2s"
+            width="1920" height="900" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!--Footer-->
+    <footer>
+        <div class="container-xxl my-3" id="footer_ctn">
+            <a href="#">Vestow</a> ©. All rights reserved.
+        </div>
+    </footer>
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="text/javascript" src="~/lib/slick/slick.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

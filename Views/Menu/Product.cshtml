@@ -1,0 +1,86 @@
+@{
+    Layout = "_Layout";
+    ViewData["Title"] = "Menu".ToUpper();
+}
+<!--Product_info-->
+<div class="container-fluid d-flex flex-column flex-md-row" id="product_info_ctn">
+     <div class="row row-cols-xl-3 row-cols-lg-2 row-cols-1 g-2">
+        <div class="col row row-cols-2">
+            <div class="img_ctn">
+                <img class="border big_img me-ld-0 me-md-2" src="~/content/images/menu/burger/Bbq-burger.png" alt="">
+                <div class="d-lg-none">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+            </div>
+            <div class="order_info">
+                <div class="product_rating">
+                    <span>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </span>
+                    <a href="">(<span>1</span> customer review)</a>
+                </div>
+                <h1>BBQ Burger</h1>
+                <p>$4.00 – $5.00</p>
+                <p>Pork, jowl salami andouille porchetta shankle chuck brisket ham hock chicken.</p>
+                <div class="option d-flex flex-column">
+                    <label for="">Sauce</label>
+                    <select id="sauce">
+                        <option value="deafault">Choose an option</option>
+                        <option value="bbq_sauce">BBQ Sauce</option>
+                        <option value="chilli_sauce">Chilli Sauce</option>
+                        <option value="ketchup">Ketchup</option>
+                    </select>
+                    <label for="">Size</label>
+                    <select id="size">
+                        <option value="deafault">Choose an option</option>
+                        <option value="small">Small</option>
+                        <option value="large">Large</option>
+                    </select>
+                </div>
+                <div class="mt-3">
+                    <input type="number" name="" id="" class="quantity" min="1" step="1" value="1">
+                    <button class="rounded-pill btn--yellow btn--hover">
+                        <i class="fa-solid fa-cart-shopping"></i>ADD TO CART
+                    </button>
+                </div>
+                <div class="product_meta d-flex flex-column mt-3">
+                    <div><span class="product_meta--sku">SKU:</span>&nbsp;N/A</div>
+                    <div><span class="product_meta--category">Category: </span>&nbsp;<a href="">BURGERS</a></div>
+                    <div><span class="product_meta--sku--tag">Tag: </span>&nbsp;<a href="">burger</a>, <a
+                            href="">sale</a></div>
+                </div>
+                <h2>Guaranteed Safe Checkout</h2>
+                <img src="../asset/img/Group.svg" alt="">
+            </div>
+        </div>
+        <div class="more_info me-md-3">
+            <div class="d-flex">
+                <div class="border">Description</div>
+                <div class="border">ADDITIONAL INFORMATION</div>
+            </div>
+            <div class="border more_info--desc">
+                <h2>Description</h2>
+                <p>At our Fresh Food Court, we offer meals of excellent quality and invite you to try our delicious
+                    food.</p>
+                <p>The key to our success is simple: providing quality consistent food that tastes great every
+                    single time. We pride ourselves on serving our customers’ delicious genuine dishes like fried
+                    chicken, pizza, burgers, rolls etc.</p>
+                <p>There is nothing more important than our client’s needs and perfect reputation of our shop.
+                    Sharing is everything and we are glad to share our latest creative ideas about banquet menus and
+                    decoration, original recipes etc.</p>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-6 col-12 position-sticky">
+        <div class="evelator position-sticky">
+             <partial name="_MenuEvelator"/>
+        </div>
+    </div>
+</div>
